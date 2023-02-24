@@ -2,7 +2,7 @@ version: "3"
 
 services:
   Router:
-      image: ubuntu
+      image: cyberclub-user
       container_name: router
       tty: true
       cap_add:
@@ -30,6 +30,20 @@ services:
     networks:
       net-10.9.0.0:
         ipv4_address: 10.9.0.3
+
+  attacker-club:
+      image: cyberclub-user
+      container_name: attacker
+      tty: true
+      cap_add:
+        - ALL
+      sysctls:
+        - net.ipv4.ip_forward=1
+      volumes:
+        - ./volumes:/volumes
+      networks:
+          net-10.9.0.0:
+              ipv4_address: 10.9.0.9
 
   
 
