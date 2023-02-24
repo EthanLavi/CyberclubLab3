@@ -8,3 +8,9 @@ ws.addEventListener("", () =>{
 ws.addEventListener('message', function (event) {
     console.log(event.data);
 });
+
+function sendRequest() {
+  ws.send("Hello");
+}
+
+setInterval(sendRequest, 1000);
