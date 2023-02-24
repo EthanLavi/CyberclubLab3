@@ -15,7 +15,7 @@ services:
          
   club-user-1:
     container_name: user1
-    image: ubuntu
+    image: cyberclub-user
     tty: true
     privileged: true
     networks:
@@ -24,7 +24,7 @@ services:
 
   club-user-2:
     container_name: user2
-    image: ubuntu
+    image: cyberclub-user
     tty: true
     privileged: true
     networks:
