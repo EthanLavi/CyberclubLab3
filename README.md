@@ -1,4 +1,4 @@
-# Lab Setup 3: Internet Spying & Spoofing <i>Working Title</i>
+# Lab Setup 3: Internet Spoofing
 
 ## Objectives
 
