@@ -7,7 +7,7 @@ const wss = new WebSocketServer.Server({ port: 8080 })
 // Creating connection using websocket
 
 wss.on("connection", ws => { 
-    console.log("new client connected");   
+    // console.log("new client connected");   
     
     // sending message to client
     // ws.send('Welcome, you are connected!'); //send back a lot of staff
@@ -16,15 +16,12 @@ wss.on("connection", ws => {
     //on message from client
     ws.on("message", data => {
         // console.log(`Client has sent us: ${data}`)
-        console.log(data)
+        // console.log(data)
 
-        let login = `
-        username: admin
-        password: Lehigh123
-      `
+        let login = `username:admin|password:Lehigh123`
 
         if (data == login) { 
-            ws.send("User authenticated, ", ws.data)
+            ws.send("User authenticated")
         }
 
         if (data == "Hello") {
@@ -53,11 +50,11 @@ wss.on("connection", ws => {
  
     // handling what to do when clients disconnects from server
     ws.on("close", () => {
-        console.log("the client has disconnected");
+        // console.log("the client has disconnected");
     });
     // handling client connection error
     ws.onerror = function () {
-        console.log("Some Error occurred")
+        // console.log("Some Error occurred")
     }
 });
 
