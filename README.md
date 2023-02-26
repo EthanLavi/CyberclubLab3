@@ -2,6 +2,12 @@
 
 ## Objectives
 
+Login to attack environment
+```{bash}
+ssh attacker@10.9.0.9
+Answer 'yes' if prompted. Enter in password: attacker
+```
+
 1) Perform Network Enumeration to find target machines (Hard-Only)
 2) Use provided program to ARP spoof the target
 3) Intercept traffic in between targets and find the following information

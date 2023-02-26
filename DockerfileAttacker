@@ -5,6 +5,7 @@ RUN useradd -rm -d /home/ubuntu -s /bin/bash -g root -G sudo -u 1000 attacker
 RUN echo 'attacker:attacker' | chpasswd
 COPY arp_spoofer.py /home/ubuntu/arp_spoofer.py
 COPY confirm.py /home/ubuntu/confirm.py
+COPY sshd_config.txt /etc/ssh/sshd_config
 RUN service ssh start
 EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D"]
